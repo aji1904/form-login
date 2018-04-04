@@ -1,0 +1,144 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<meta charset="utf-8" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="w3school.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>IT polsri</title>
+</head>
+<body background="gambar/1.jpg">
+	<div class="w3-container" 
+	style="	width: 380px;
+			background-color: white; 
+			margin: auto; 
+			border-radius: 15px; 
+			margin-top: 20px; 
+			margin-bottom: 10px;">
+		<h2><center>IT Polsri</center></h2>
+	</div>
+	<div class="w3-container" 
+	style="	width: 380px; 
+			background-color: white; 
+			border-radius: 15px; 
+			padding: 16px; 
+			margin-top: 40px; 
+			margin: auto; 
+			margin-bottom: 20px;">
+	<form action="login.php" 
+	style="	margin-bottom: 20px;">
+		<div class="gambar-container" 
+		style="	text-align: center; 
+				margin: 5px 0 20px 0;">
+			<img src="gambar/1.jpg" 
+			style="	width: 130px;
+					height: 130px; 
+					border-radius: 50%">
+		</div>
+
+		<div class="login">
+			<label for="uname" 
+			style="font-family: segoe ui;">Email atau Username</label>
+			<input type="text" name="uname" required 
+			style="	outline: 0; 
+					width: 90%; 
+					padding: 12px 20px; 
+					margin: 8px 0; 
+					margin-bottom: 20px; 
+					display: inline-block; 
+					box-sizing: border-box; 
+					border-radius: 20px; 
+					border: 1px solid #00e5ff;">
+				<i class="fa fa-user" 
+					style="	font-size: 24px; 
+							padding-left: 10px; 
+							color: #00e5ff;"></i>
+
+			<label for="psw" style="font-family: segoe ui;">Password</label>
+			<input type="password" name="psw" required 
+			style="	outline: 0; 
+					width: 90%; 
+					padding: 12px 20px; 
+					margin: 8px 0; 
+					margin-bottom: 20px; 
+					display: inline-block; 
+					box-sizing: border-box; 
+					border-radius: 20px; 
+					border: 1px solid #00e5ff;">
+				<i class="fa fa-lock" 
+					style="	font-size:24px; 
+							padding-left: 10px; 
+							color: #00e5ff;"></i>
+
+			<a href="lupa-psw" class="lupa-psw" 
+				style="	font-family: segoe ui; 
+						float: right; 
+						padding-right: 10px;">Lupa Password</a>
+			
+			<button class="w3-btn w3-round-xlarge" 
+				style="	margin-top: 20px;
+						padding: 10px; 
+						background-color:#00e5ff;
+						width: 100%;">Login</button>
+		</div>
+	</form>		
+		
+		<!-- button daftar -->
+		<button class="w3-btn w3-round-xlarge" 
+			style="	width: 100%; 
+					background-color: #00e5ff;" 
+			onclick="document.getElementById('id01').style.display='block'">Daftar</button>
+		<!-- button daftar -->
+
+		
+			<div id="id01" class="modal">
+  			
+		<!-- form Hidden -->
+		<form class="modal-content animate" action="daftar.php">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<div class="head" style="margin-bottom: 20px;">
+				<font size="6"><center>Form Register</center></font>
+			</div>
+
+			<div class="gambar-container" 
+			style="	text-align: center; 
+				margin: 5px 0 0 0;">
+
+			<div class="input-reg">
+			<input type="text" name="name" class="user" placeholder="Username" required>
+
+			<input type="text" name="email" class="email" placeholder="Email or Phone Number" required>
+
+			<input type="password" name="pass" class="pass" placeholder="Password" required style="margin-bottom: 30px;">
+			</div>
+
+			<div class="btn">
+				<button class="w3-btn w3-round-xlarge" type="submit"
+				style="	background-color: blue;
+						width: 130px;
+						color: white;
+						margin-right: 60px;">Daftar</button>
+				<button class="w3-btn w3-round-xlarge" 
+				style="	background-color: blue;
+						width: 130px;
+						color: white;" type="reset" 
+				onclick="document.getElementById('id01').style.display='none'" class="close">Cancel</button>
+			</div>
+		</form>
+		</div>
+		<!-- form Hidden -->  
+	</body>
+
+	<script>
+	
+	var modal = document.getElementById('id01');
+
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+	</script> 
+
+</html>
